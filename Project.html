@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Londrina+Sketch&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .header {
+      background-color: #ccd5ae;
+      padding: 20px;
+      text-align: center;
+      color: #344e41;
+      font-family: "Inconsolata", monospace;
+      font-weight: 700;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #e9edc9;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #344e41;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-family: "Kanit", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .topnav a:hover {
+      background-color: ghostwhite;
+      color: #344e41;
+    }
+
+    .topnav .search-container {
+      float: right;
+      margin-top: 11px;
+    }
+
+    .topnav .search-container button {
+      float: right;
+      padding: 6px 10px;
+      margin-top: 1px;
+      margin-right: 16px;
+      background: #ddd;
+      font-size: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .topnav .search-container button:hover {
+      background: #ccc;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      margin-top: 50px;
+      flex: 1 1 25%;
+      padding: 5px;
+    }
+
+    .column img {
+      width: 90%;
+      border-radius: 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav .search-container {
+        float: right;
+      }
+
+      .topnav a,
+      .topnav input[type=text],
+      .topnav .search-container button {
+        float: right;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+      }
+
+      .topnav input[type=text] {
+        border: 1px solid #ccc;
+      }
+
+      .column {
+        flex: 1 1 100%;
+      }
+    }
+
+    .info1, .info2, .info3{
+      width: fit-content;
+      text-align: center;
+      font-family: monospace;
+      padding: 2px 16px;
+      background-color: #e9edc9;
+      float: right;
+      margin-right: 50px;
+      border-radius: 20px;
+      margin-top: 10px;
+    }
+
+    .Product1{
+      width: fit-content;
+      text-align: center;
+      font-family: "Titillium Web", sans-serif;
+      font-weight: 200;
+      padding: 2px 16px;
+      background-color: #e9edc9;
+      float: right;
+      margin-right: 100px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+
+    .Product2{
+      width: fit-content;
+      text-align: center;
+      font-family: "Titillium Web", sans-serif;
+      font-weight: 200;
+      padding: 2px 16px;
+      background-color: #e9edc9;
+      float: right;
+      margin-right: 85px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+
+    .Product3{
+      width: fit-content;
+      text-align: center;
+      font-family: "Titillium Web", sans-serif;
+      font-weight: 200;
+      padding: 2px 16px;
+      background-color: #e9edc9;
+      float: right;
+      margin-right: 70px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+
+    form {
+      border: 3px solid #f1f1f1;
+      margin-left: 130px;
+      margin-top: 20px;
+      margin-right: 180px;
+    }
+
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #f44336;
+    }
+
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+    }
+
+    img.avatar {
+      width: 20%;
+      border-radius: 50%;
+    }
+
+    .container {
+      padding: 16px;
+    }
+
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+
+    @media screen and (max-width: 300px) {
+      span.psw {
+        display: block;
+        float: none;
+      }
+
+      .cancelbtn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Matcha House</h1>
+</div>
+
+<div class="topnav">
+  <a href="Home"><strong>Home</strong></a>
+  <a href="aboutus"><strong>About Us</strong></a>
+  <a href="Items"><strong>Cart</strong></a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="Product1">
+      <h3>Matcha Cake</h3>
+    </div>
+    <img src="https://i.pinimg.com/564x/40/db/7f/40db7fd8de0db490835ebb0497287722.jpg" alt="Cake">
+    <div class="info1">
+      <p>Whole: ₱850 | Piece: ₱150</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="Product2">
+      <h3>Matcha Frappe</h3>
+    </div>
+    <img src="https://i.pinimg.com/564x/fb/f8/72/fbf872ea05c2607461dab9fe40a6736a.jpg" alt="Frappe">
+    <div class="info2">
+      <p>Regular: ₱150 | Large: ₱250</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="Product3">
+      <h3>Matcha Ice Cream</h3>
+    </div>
+    <img src="https://i.pinimg.com/564x/78/33/f8/7833f854b4f472eb3adaf81d95948a6c.jpg" alt="Icecream">
+    <div class="info3">
+      <p>Regular: ₱100 | Large: ₱150</p>
+    </div>
+  </div>
+</div>
+
+<form action="action_page.php" method="post">
+  <div class="imgcontainer">
+    <img src="https://i.pinimg.com/564x/18/b5/b5/18b5b599bb873285bd4def283c0d3c09.jpg" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="user" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+  </div>
+
+  <div class="container">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+</body>
+</html>
